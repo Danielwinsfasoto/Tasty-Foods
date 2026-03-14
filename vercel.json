@@ -2,5 +2,8 @@
   "buildCommand": "npx react-router build",
   "installCommand": "npm install --legacy-peer-deps",
   "outputDirectory": "build/client",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
