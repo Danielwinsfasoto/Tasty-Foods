@@ -2,6 +2,7 @@
 import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { loadFontsFromTailwindSource } from "./plugins/loadFontsFromTailwindSource";
 
 export default defineConfig({
   envPrefix: "NEXT_PUBLIC_",
@@ -9,6 +10,7 @@ export default defineConfig({
     target: "esnext",
   },
   plugins: [
+    loadFontsFromTailwindSource(),
     reactRouter(),
     tsconfigPaths(),
   ],
